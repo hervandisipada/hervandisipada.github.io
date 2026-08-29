@@ -159,7 +159,7 @@
                     <button
                         class="md:hidden ml-4 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white p-2 focus:outline-none transition-colors"
                         id="mobile-menu-btn">
-                        <i class="bi bi-list text-2xl"></i>
+                        <i class="bi bi-list text-2xl inline-block transition-transform duration-300"></i>
                     </button>
                 </div>
             </div>
@@ -674,16 +674,29 @@
         // Mobile menu toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
+        const toggleMenu = (forceClose = false) => {
+            if (forceClose) {
+                menu.classList.add('hidden');
+            } else {
+                menu.classList.toggle('hidden');
+            }
+            
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('bi-x-lg', 'rotate-90');
+                icon.classList.add('bi-list');
+            } else {
+                icon.classList.remove('bi-list');
+                icon.classList.add('bi-x-lg', 'rotate-90');
+            }
+        };
+
+        btn.addEventListener('click', () => toggleMenu());
 
         // Close mobile menu on link click
         menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
+            link.addEventListener('click', () => toggleMenu(true));
         });
 
         // Navbar blur effect on scroll
