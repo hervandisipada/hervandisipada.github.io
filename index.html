@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,84 +57,124 @@
     </script>
     <style>
         /* Custom scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f3f4f6; }
-        .dark ::-webkit-scrollbar-track { background: #050505; }
-        ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
-        .dark ::-webkit-scrollbar-thumb { background: #333; }
-        ::-webkit-scrollbar-thumb:hover { background: #FF6B00; }
-        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f3f4f6;
+        }
+
+        .dark ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 4px;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background: #333;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FF6B00;
+        }
+
         .glass-card {
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(0, 0, 0, 0.05);
         }
+
         .dark .glass-card {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
+
         .brand-gradient {
             background: linear-gradient(135deg, #FF6B00, #ffba85);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+
         .nav-active {
             font-weight: 700 !important;
             color: #FF6B00 !important;
         }
     </style>
 </head>
-<body class="bg-neutral-50 dark:bg-dark-900 text-neutral-600 dark:text-neutral-300 font-sans antialiased selection:bg-brand selection:text-white overflow-x-hidden relative transition-colors duration-300">
+
+<body
+    class="bg-neutral-50 dark:bg-dark-900 text-neutral-600 dark:text-neutral-300 font-sans antialiased selection:bg-brand selection:text-white overflow-x-hidden relative transition-colors duration-300">
 
     <!-- Background Glows -->
     <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brand/10 rounded-full blur-[120px] animate-pulse-slow"></div>
-        <div class="absolute bottom-[-10%] right-[-10%] w-[30%] h-[30%] bg-brand/5 rounded-full blur-[100px] animate-pulse-slow" style="animation-delay: 2s;"></div>
+        <div
+            class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brand/10 rounded-full blur-[120px] animate-pulse-slow">
+        </div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[30%] h-[30%] bg-brand/5 rounded-full blur-[100px] animate-pulse-slow"
+            style="animation-delay: 2s;"></div>
     </div>
 
     <!-- Navbar -->
     <nav class="fixed w-full z-50 transition-all duration-300 py-5" id="navbar">
-        <div class="absolute inset-0 bg-white/80 dark:bg-dark-900/80 backdrop-blur-md border-b border-neutral-200 dark:border-white/5 transition-colors duration-300"></div>
+        <div
+            class="absolute inset-0 bg-white/80 dark:bg-dark-900/80 backdrop-blur-md border-b border-neutral-200 dark:border-white/5 transition-colors duration-300">
+        </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="flex items-center justify-between h-16">
-                <a href="#" class="text-2xl font-bold text-neutral-900 dark:text-white tracking-wide group transition-colors">
+                <a href="#"
+                    class="text-2xl font-bold text-neutral-900 dark:text-white tracking-wide group transition-colors">
                     hervandisipada
                 </a>
-                
+
                 <div class="flex items-center">
                     <!-- Desktop Menu -->
                     <div class="hidden md:flex items-center space-x-8">
-                        <a href="#home" class="text-sm font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Home</a>
-                        <a href="#about" class="text-sm font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Tentang</a>
-                        <a href="#skills" class="text-sm font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Keahlian</a>
-                        <a href="#projects" class="text-sm font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Portofolio</a>
-                        <a href="#contact" class="px-5 py-2 text-sm font-medium text-neutral-900 dark:text-white border border-neutral-300 dark:border-white/10 rounded-full hover:bg-neutral-100 dark:hover:bg-white/5 hover:border-brand/50 transition-all duration-300">Kontak</a>
+                        <a href="#home"
+                            class="text-sm font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Home</a>
+                        <a href="#about"
+                            class="text-sm font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Tentang</a>
+                        <a href="#skills"
+                            class="text-sm font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Keahlian</a>
+                        <a href="#projects"
+                            class="text-sm font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Portofolio</a>
+                        <a href="#contact"
+                            class="px-5 py-2 text-sm font-medium text-neutral-900 dark:text-white border border-neutral-300 dark:border-white/10 rounded-full hover:bg-neutral-100 dark:hover:bg-white/5 hover:border-brand/50 transition-all duration-300">Kontak</a>
                     </div>
 
                     <!-- Theme Toggle Button -->
-                    <button id="theme-toggle" class="ml-6 w-10 h-10 rounded-full bg-neutral-200 dark:bg-white/10 flex items-center justify-center text-neutral-600 dark:text-neutral-400 hover:text-brand dark:hover:text-brand transition-colors focus:outline-none">
+                    <button id="theme-toggle"
+                        class="ml-6 w-10 h-10 rounded-full bg-neutral-200 dark:bg-white/10 flex items-center justify-center text-neutral-600 dark:text-neutral-400 hover:text-brand dark:hover:text-brand transition-colors focus:outline-none">
                         <i class="bi bi-moon-fill dark:hidden"></i>
                         <i class="bi bi-sun-fill hidden dark:block"></i>
                     </button>
 
                     <!-- Mobile Menu Button -->
-                    <button class="md:hidden ml-4 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white p-2 focus:outline-none transition-colors" id="mobile-menu-btn">
+                    <button
+                        class="md:hidden ml-4 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white p-2 focus:outline-none transition-colors"
+                        id="mobile-menu-btn">
                         <i class="bi bi-list text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
-        
+
         <!-- Mobile Menu -->
-        <div class="md:hidden hidden bg-white dark:bg-dark-800 border-b border-neutral-200 dark:border-white/5 absolute w-full shadow-2xl transition-colors duration-300" id="mobile-menu">
+        <div class="md:hidden hidden bg-white dark:bg-dark-800 border-b border-neutral-200 dark:border-white/5 absolute w-full shadow-2xl transition-colors duration-300"
+            id="mobile-menu">
             <div class="px-6 py-4 space-y-4 flex flex-col">
-                <a href="#home" class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors font-medium">Home</a>
-                <a href="#about" class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors font-medium">Tentang</a>
-                <a href="#skills" class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors font-medium">Keahlian</a>
-                <a href="#projects" class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors font-medium">Portofolio</a>
+                <a href="#home"
+                    class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors font-medium">Home</a>
+                <a href="#about"
+                    class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors font-medium">Tentang</a>
+                <a href="#skills"
+                    class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors font-medium">Keahlian</a>
+                <a href="#projects"
+                    class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors font-medium">Portofolio</a>
                 <a href="#contact" class="text-brand font-medium">Kontak</a>
             </div>
         </div>
@@ -144,49 +185,69 @@
         <section id="home" class="min-h-screen flex items-center pt-20 relative">
             <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1 space-y-8 relative z-10">
-                    <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full border border-brand/30 bg-brand/5 text-brand text-sm font-medium">
+                    <div
+                        class="inline-flex items-center space-x-2 px-4 py-2 rounded-full border border-brand/30 bg-brand/5 text-brand text-sm font-medium">
                         <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
                         <span>Open for Work</span>
                     </div>
-                    
+
                     <h1 class="text-5xl md:text-7xl font-bold leading-tight tracking-tight">
                         <span class="text-neutral-900 dark:text-white transition-colors">Junior Web</span><br>
                         <span class="brand-gradient">Developer.</span>
                     </h1>
-                    
-                    <p class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 max-w-xl leading-relaxed transition-colors">
-                        Halo, saya <strong>Hervandi A. Sipada</strong>. Berfokus pada pengembangan antarmuka web yang responsif dan modern. Memadukan desain fungsional dengan struktur kode yang bersih.
+
+                    <p
+                        class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 max-w-xl leading-relaxed transition-colors">
+                        Halo, saya <strong>Hervandi A. Sipada</strong>. Berfokus pada pengembangan antarmuka web yang
+                        responsif dan modern. Memadukan desain fungsional dengan struktur kode yang bersih.
                     </p>
-                    
+
                     <div class="flex flex-wrap items-center gap-4 pt-4">
-                        <a href="#projects" class="px-8 py-4 rounded-full bg-brand text-white font-semibold hover:bg-brand-light transition-all duration-300 shadow-[0_0_15px_rgba(255,107,0,0.4)] hover:shadow-[0_0_25px_rgba(255,107,0,0.6)] hover:-translate-y-1">
+                        <a href="#projects"
+                            class="px-8 py-4 rounded-full bg-brand text-white font-semibold hover:bg-brand-light transition-all duration-300 shadow-[0_0_15px_rgba(255,107,0,0.4)] hover:shadow-[0_0_25px_rgba(255,107,0,0.6)] hover:-translate-y-1">
                             Lihat Karya Saya
                         </a>
-                        <a href="https://github.com/hervandisipada" target="_blank" class="w-14 h-14 rounded-full flex items-center justify-center border border-neutral-300 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/30 hover:bg-neutral-100 dark:hover:bg-white/5 transition-all text-neutral-600 dark:text-white hover:-translate-y-1">
+                        <a href="https://github.com/hervandisipada" target="_blank"
+                            class="w-14 h-14 rounded-full flex items-center justify-center border border-neutral-300 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/30 hover:bg-neutral-100 dark:hover:bg-white/5 transition-all text-neutral-600 dark:text-white hover:-translate-y-1">
                             <i class="bi bi-github text-xl"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/hervandi-sipada-1988a5272/" target="_blank" class="w-14 h-14 rounded-full flex items-center justify-center border border-neutral-300 dark:border-white/10 hover:border-brand/50 hover:bg-brand/5 hover:text-brand transition-all text-neutral-600 dark:text-white hover:-translate-y-1">
+                        <a href="https://www.linkedin.com/in/hervandi-sipada-1988a5272/" target="_blank"
+                            class="w-14 h-14 rounded-full flex items-center justify-center border border-neutral-300 dark:border-white/10 hover:border-brand/50 hover:bg-brand/5 hover:text-brand transition-all text-neutral-600 dark:text-white hover:-translate-y-1">
                             <i class="bi bi-linkedin text-xl"></i>
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="order-1 md:order-2 flex justify-center md:justify-end relative">
                     <!-- Abstract decoration -->
                     <div class="relative w-72 h-72 md:w-96 md:h-96 animate-float">
-                        <div class="absolute inset-0 bg-gradient-to-br from-brand to-purple-900 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] blur-3xl opacity-30 dark:opacity-40 transition-opacity"></div>
-                        <div class="absolute inset-4 glass-card rounded-[30%_70%_70%_30%/30%_30%_70%_70%] flex items-center justify-center overflow-hidden shadow-2xl">
-                            <i class="bi bi-code-slash text-8xl text-neutral-300 dark:text-white/30 transition-colors"></i>
-                            <div class="absolute inset-0 bg-gradient-to-t from-white/80 dark:from-dark-900/80 to-transparent transition-colors"></div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-brand to-purple-900 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] blur-3xl opacity-30 dark:opacity-40 transition-opacity">
+                        </div>
+                        <div
+                            class="absolute inset-4 glass-card rounded-[30%_70%_70%_30%/30%_30%_70%_70%] flex items-center justify-center overflow-hidden shadow-2xl">
+                            <i
+                                class="bi bi-code-slash text-8xl text-neutral-300 dark:text-white/30 transition-colors"></i>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-white/80 dark:from-dark-900/80 to-transparent transition-colors">
+                            </div>
                         </div>
                         <!-- Floating badges -->
-                        <div class="absolute top-10 -left-6 glass-card px-4 py-3 rounded-2xl flex items-center gap-3 animate-float shadow-xl" style="animation-delay: 1s;">
-                            <div class="w-10 h-10 rounded-full bg-indigo-500/10 dark:bg-indigo-500/20 flex items-center justify-center text-indigo-500 dark:text-indigo-400"><i class="bi bi-filetype-php"></i></div>
-                            <div class="text-sm font-semibold text-neutral-800 dark:text-white transition-colors">PHP</div>
+                        <div class="absolute top-10 -left-6 glass-card px-4 py-3 rounded-2xl flex items-center gap-3 animate-float shadow-xl"
+                            style="animation-delay: 1s;">
+                            <div
+                                class="w-10 h-10 rounded-full bg-indigo-500/10 dark:bg-indigo-500/20 flex items-center justify-center text-indigo-500 dark:text-indigo-400">
+                                <i class="bi bi-filetype-php"></i></div>
+                            <div class="text-sm font-semibold text-neutral-800 dark:text-white transition-colors">PHP
+                            </div>
                         </div>
-                        <div class="absolute bottom-10 -right-4 glass-card px-4 py-3 rounded-2xl flex items-center gap-3 animate-float shadow-xl" style="animation-delay: 2s;">
-                            <div class="w-10 h-10 rounded-full bg-red-500/10 dark:bg-red-500/20 flex items-center justify-center text-red-500"><i class="bi bi-fire"></i></div>
-                            <div class="text-sm font-semibold text-neutral-800 dark:text-white transition-colors">Laravel 12</div>
+                        <div class="absolute bottom-10 -right-4 glass-card px-4 py-3 rounded-2xl flex items-center gap-3 animate-float shadow-xl"
+                            style="animation-delay: 2s;">
+                            <div
+                                class="w-10 h-10 rounded-full bg-red-500/10 dark:bg-red-500/20 flex items-center justify-center text-red-500">
+                                <i class="bi bi-fire"></i></div>
+                            <div class="text-sm font-semibold text-neutral-800 dark:text-white transition-colors">
+                                Laravel 12</div>
                         </div>
                     </div>
                 </div>
@@ -198,10 +259,15 @@
             <div class="max-w-7xl mx-auto px-6">
                 <div class="flex flex-col md:flex-row gap-16 items-center">
                     <div class="w-full md:w-5/12 relative">
-                        <div class="aspect-[4/5] rounded-3xl glass-card p-2 transform rotate-2 hover:rotate-0 transition-all duration-500 shadow-xl">
-                            <div class="w-full h-full bg-neutral-100 dark:bg-dark-700 rounded-2xl flex items-center justify-center relative overflow-hidden transition-colors">
-                                <i class="bi bi-person-workspace text-7xl text-neutral-300 dark:text-white/10 transition-colors"></i>
-                                <div class="absolute inset-0 bg-gradient-to-tr from-brand/10 dark:from-brand/20 to-transparent mix-blend-overlay"></div>
+                        <div
+                            class="aspect-[4/5] rounded-3xl glass-card p-2 transform rotate-2 hover:rotate-0 transition-all duration-500 shadow-xl">
+                            <div
+                                class="w-full h-full bg-neutral-100 dark:bg-dark-700 rounded-2xl flex items-center justify-center relative overflow-hidden transition-colors">
+                                <i
+                                    class="bi bi-person-workspace text-7xl text-neutral-300 dark:text-white/10 transition-colors"></i>
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-tr from-brand/10 dark:from-brand/20 to-transparent mix-blend-overlay">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -210,23 +276,36 @@
                             <span class="w-8 h-px bg-brand"></span>
                             <h2 class="text-sm font-bold text-brand uppercase tracking-widest">Tentang Saya</h2>
                         </div>
-                        <h3 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white leading-tight transition-colors">Membangun web dengan <br>fokus pada performa dan detail.</h3>
-                        <div class="space-y-4 text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed mt-6 transition-colors">
+                        <h3
+                            class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white leading-tight transition-colors">
+                            Membangun web dengan <br>fokus pada performa dan detail.</h3>
+                        <div
+                            class="space-y-4 text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed mt-6 transition-colors">
                             <p>
-                                Saya memiliki ketertarikan besar dalam pengembangan web. Saat ini, fokus utama saya adalah memperdalam ekosistem <span class="text-neutral-900 dark:text-white font-medium">PHP</span> dan membangun antarmuka pengguna menggunakan <span class="text-neutral-900 dark:text-white font-medium">Tailwind CSS</span>.
+                                Saya memiliki ketertarikan besar dalam pengembangan web. Saat ini, fokus utama saya
+                                adalah memperdalam ekosistem <span
+                                    class="text-neutral-900 dark:text-white font-medium">PHP</span> dan membangun
+                                antarmuka pengguna menggunakan <span
+                                    class="text-neutral-900 dark:text-white font-medium">Tailwind CSS</span>.
                             </p>
                             <p>
-                                Saya percaya bahwa kode yang baik adalah kode yang mudah dipelihara dan dibaca. Pendekatan ini membantu saya dalam memberikan pengalaman pengguna yang optimal dengan performa yang efisien.
+                                Saya percaya bahwa kode yang baik adalah kode yang mudah dipelihara dan dibaca.
+                                Pendekatan ini membantu saya dalam memberikan pengalaman pengguna yang optimal dengan
+                                performa yang efisien.
                             </p>
                         </div>
                         <div class="pt-8 grid grid-cols-2 gap-8">
                             <div class="border-l-2 border-brand/50 pl-4">
-                                <h4 class="text-4xl font-bold text-neutral-900 dark:text-white mb-1 transition-colors">1+</h4>
-                                <p class="text-sm text-neutral-500 uppercase tracking-wider font-medium">Tahun Belajar</p>
+                                <h4 class="text-4xl font-bold text-neutral-900 dark:text-white mb-1 transition-colors">
+                                    1+</h4>
+                                <p class="text-sm text-neutral-500 uppercase tracking-wider font-medium">Tahun Belajar
+                                </p>
                             </div>
                             <div class="border-l-2 border-brand/50 pl-4">
-                                <h4 class="text-4xl font-bold text-neutral-900 dark:text-white mb-1 transition-colors">5+</h4>
-                                <p class="text-sm text-neutral-500 uppercase tracking-wider font-medium">Proyek Selesai</p>
+                                <h4 class="text-4xl font-bold text-neutral-900 dark:text-white mb-1 transition-colors">
+                                    5+</h4>
+                                <p class="text-sm text-neutral-500 uppercase tracking-wider font-medium">Proyek Selesai
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -235,9 +314,11 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="py-24 bg-white dark:bg-dark-800 border-t border-b border-neutral-200 dark:border-white/5 relative transition-colors">
-            <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-brand/30 to-transparent"></div>
-            
+        <section id="skills"
+            class="py-24 bg-white dark:bg-dark-800 border-t border-b border-neutral-200 dark:border-white/5 relative transition-colors">
+            <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-brand/30 to-transparent">
+            </div>
+
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center max-w-2xl mx-auto mb-16">
                     <div class="inline-flex items-center space-x-2 mb-4 justify-center">
@@ -245,50 +326,77 @@
                         <h2 class="text-sm font-bold text-brand uppercase tracking-widest">Keahlian</h2>
                         <span class="w-8 h-px bg-brand"></span>
                     </div>
-                    <h3 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white transition-colors">Teknologi yang Saya Gunakan</h3>
+                    <h3 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white transition-colors">
+                        Teknologi yang Saya Gunakan</h3>
                 </div>
-                
+
                 <div class="grid md:grid-cols-3 gap-6">
                     <!-- Front-end -->
-                    <div class="glass-card p-8 rounded-3xl group hover:border-brand/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,107,0,0.1)]">
-                        <div class="w-16 h-16 bg-neutral-100 dark:bg-gradient-to-br dark:from-dark-700 dark:to-dark-800 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-all duration-300 border border-neutral-200 dark:border-white/5 shadow-inner">
+                    <div
+                        class="glass-card p-8 rounded-3xl group hover:border-brand/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,107,0,0.1)]">
+                        <div
+                            class="w-16 h-16 bg-neutral-100 dark:bg-gradient-to-br dark:from-dark-700 dark:to-dark-800 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-all duration-300 border border-neutral-200 dark:border-white/5 shadow-inner">
                             <i class="bi bi-window-sidebar text-3xl text-brand"></i>
                         </div>
-                        <h4 class="text-2xl font-bold text-neutral-900 dark:text-white mb-4 transition-colors">Front-end</h4>
-                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8 transition-colors">Membangun antarmuka pengguna yang responsif dan interaktif.</p>
+                        <h4 class="text-2xl font-bold text-neutral-900 dark:text-white mb-4 transition-colors">Front-end
+                        </h4>
+                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8 transition-colors">
+                            Membangun antarmuka pengguna yang responsif dan interaktif.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-1.5 text-xs font-semibold bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-lg text-neutral-700 dark:text-neutral-300 transition-colors">HTML / CSS</span>
-                            <span class="px-4 py-1.5 text-xs font-semibold bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-lg text-neutral-700 dark:text-neutral-300 transition-colors">JavaScript</span>
-                            <span class="px-4 py-1.5 text-xs font-semibold bg-brand/10 border border-brand/20 rounded-lg text-brand">Tailwind CSS</span>
-                            <span class="px-4 py-1.5 text-xs font-semibold bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-lg text-neutral-700 dark:text-neutral-300 transition-colors">Bootstrap</span>
+                            <span
+                                class="px-4 py-1.5 text-xs font-semibold bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-lg text-neutral-700 dark:text-neutral-300 transition-colors">HTML
+                                / CSS</span>
+                            <span
+                                class="px-4 py-1.5 text-xs font-semibold bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-lg text-neutral-700 dark:text-neutral-300 transition-colors">JavaScript</span>
+                            <span
+                                class="px-4 py-1.5 text-xs font-semibold bg-brand/10 border border-brand/20 rounded-lg text-brand">Tailwind
+                                CSS</span>
+                            <span
+                                class="px-4 py-1.5 text-xs font-semibold bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-lg text-neutral-700 dark:text-neutral-300 transition-colors">Bootstrap</span>
                         </div>
                     </div>
 
                     <!-- Back-end -->
-                    <div class="glass-card p-8 rounded-3xl group hover:border-brand/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,107,0,0.1)]">
-                        <div class="w-16 h-16 bg-neutral-100 dark:bg-gradient-to-br dark:from-dark-700 dark:to-dark-800 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-all duration-300 border border-neutral-200 dark:border-white/5 shadow-inner">
+                    <div
+                        class="glass-card p-8 rounded-3xl group hover:border-brand/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,107,0,0.1)]">
+                        <div
+                            class="w-16 h-16 bg-neutral-100 dark:bg-gradient-to-br dark:from-dark-700 dark:to-dark-800 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-all duration-300 border border-neutral-200 dark:border-white/5 shadow-inner">
                             <i class="bi bi-hdd-network text-3xl text-brand"></i>
                         </div>
-                        <h4 class="text-2xl font-bold text-neutral-900 dark:text-white mb-4 transition-colors">Back-end</h4>
-                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8 transition-colors">Menerapkan logika sistem dan arsitektur server menggunakan pola MVC.</p>
+                        <h4 class="text-2xl font-bold text-neutral-900 dark:text-white mb-4 transition-colors">Back-end
+                        </h4>
+                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8 transition-colors">
+                            Menerapkan logika sistem dan arsitektur server menggunakan pola MVC.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-1.5 text-xs font-semibold bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-lg text-neutral-700 dark:text-neutral-300 transition-colors">PHP</span>
-                            <span class="px-4 py-1.5 text-xs font-semibold bg-brand/10 border border-brand/20 rounded-lg text-brand">Laravel</span>
-                            <span class="px-4 py-1.5 text-xs font-semibold bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-lg text-neutral-700 dark:text-neutral-300 transition-colors">REST API</span>
+                            <span
+                                class="px-4 py-1.5 text-xs font-semibold bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-lg text-neutral-700 dark:text-neutral-300 transition-colors">PHP</span>
+                            <span
+                                class="px-4 py-1.5 text-xs font-semibold bg-brand/10 border border-brand/20 rounded-lg text-brand">Laravel</span>
+                            <span
+                                class="px-4 py-1.5 text-xs font-semibold bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-lg text-neutral-700 dark:text-neutral-300 transition-colors">REST
+                                API</span>
                         </div>
                     </div>
 
                     <!-- Database & Tools -->
-                    <div class="glass-card p-8 rounded-3xl group hover:border-brand/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,107,0,0.1)]">
-                        <div class="w-16 h-16 bg-neutral-100 dark:bg-gradient-to-br dark:from-dark-700 dark:to-dark-800 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-all duration-300 border border-neutral-200 dark:border-white/5 shadow-inner">
+                    <div
+                        class="glass-card p-8 rounded-3xl group hover:border-brand/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,107,0,0.1)]">
+                        <div
+                            class="w-16 h-16 bg-neutral-100 dark:bg-gradient-to-br dark:from-dark-700 dark:to-dark-800 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-all duration-300 border border-neutral-200 dark:border-white/5 shadow-inner">
                             <i class="bi bi-database text-3xl text-brand"></i>
                         </div>
-                        <h4 class="text-2xl font-bold text-neutral-900 dark:text-white mb-4 transition-colors">Data & Tools</h4>
-                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8 transition-colors">Manajemen data yang terstruktur dan alat kolaborasi modern.</p>
+                        <h4 class="text-2xl font-bold text-neutral-900 dark:text-white mb-4 transition-colors">Data &
+                            Tools</h4>
+                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8 transition-colors">
+                            Manajemen data yang terstruktur dan alat kolaborasi modern.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-1.5 text-xs font-semibold bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-lg text-neutral-700 dark:text-neutral-300 transition-colors">MySQL</span>
-                            <span class="px-4 py-1.5 text-xs font-semibold bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-lg text-neutral-700 dark:text-neutral-300 transition-colors">Git / GitHub</span>
-                            <span class="px-4 py-1.5 text-xs font-semibold bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-lg text-neutral-700 dark:text-neutral-300 transition-colors">Composer</span>
+                            <span
+                                class="px-4 py-1.5 text-xs font-semibold bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-lg text-neutral-700 dark:text-neutral-300 transition-colors">MySQL</span>
+                            <span
+                                class="px-4 py-1.5 text-xs font-semibold bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-lg text-neutral-700 dark:text-neutral-300 transition-colors">Git
+                                / GitHub</span>
+                            <span
+                                class="px-4 py-1.5 text-xs font-semibold bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-lg text-neutral-700 dark:text-neutral-300 transition-colors">Composer</span>
                         </div>
                     </div>
                 </div>
@@ -304,67 +412,99 @@
                             <span class="w-8 h-px bg-brand"></span>
                             <h2 class="text-sm font-bold text-brand uppercase tracking-widest">Portofolio</h2>
                         </div>
-                        <h3 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white transition-colors">Proyek Terpilih</h3>
+                        <h3 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white transition-colors">
+                            Proyek Terpilih</h3>
                     </div>
-                    <a href="https://github.com/hervandisipada" target="_blank" class="inline-flex items-center text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors group font-medium">
-                        Lihat semua di GitHub 
+                    <a href="https://github.com/hervandisipada" target="_blank"
+                        class="inline-flex items-center text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors group font-medium">
+                        Lihat semua di GitHub
                         <i class="bi bi-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
                     </a>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- Project 1: Pandoi Banggai -->
-                    <div class="group relative rounded-3xl overflow-hidden glass-card hover:border-brand/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(255,107,0,0.08)]">
-                        <div class="h-72 bg-neutral-200 dark:bg-dark-800 relative overflow-hidden flex items-center justify-center border-b border-neutral-300 dark:border-white/5 transition-colors">
-                            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMCwwLDAsMC4wNSkiLz48L3N2Zz4=')] dark:bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wMykiLz48L3N2Zz4=')] opacity-50"></div>
-                            <i class="bi bi-translate text-9xl text-neutral-400 dark:text-white/5 group-hover:scale-110 transition-transform duration-700"></i>
-                            <div class="absolute inset-0 bg-gradient-to-t from-neutral-100 dark:from-dark-800 to-transparent opacity-90 transition-colors"></div>
+                    <div
+                        class="group relative rounded-3xl overflow-hidden glass-card hover:border-brand/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(255,107,0,0.08)]">
+                        <div
+                            class="h-72 bg-neutral-200 dark:bg-dark-800 relative overflow-hidden flex items-center justify-center border-b border-neutral-300 dark:border-white/5 transition-colors">
+                            <div
+                                class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMCwwLDAsMC4wNSkiLz48L3N2Zz4=')] dark:bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wMykiLz48L3N2Zz4=')] opacity-50">
+                            </div>
+                            <i
+                                class="bi bi-translate text-9xl text-neutral-400 dark:text-white/5 group-hover:scale-110 transition-transform duration-700"></i>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-neutral-100 dark:from-dark-800 to-transparent opacity-90 transition-colors">
+                            </div>
                         </div>
                         <div class="p-10 relative">
                             <div class="absolute -top-7 right-8">
-                                <a href="https://pandoibanggai.my.id/" target="_blank" class="w-14 h-14 rounded-full bg-brand text-white flex items-center justify-center hover:scale-110 hover:shadow-brand-glow transition-all shadow-xl">
+                                <a href="https://pandoibanggai.my.id/" target="_blank"
+                                    class="w-14 h-14 rounded-full bg-brand text-white flex items-center justify-center hover:scale-110 hover:shadow-brand-glow transition-all shadow-xl">
                                     <i class="bi bi-arrow-up-right text-2xl"></i>
                                 </a>
                             </div>
                             <div class="flex gap-3 mb-5">
                                 <span class="text-xs font-bold tracking-widest text-brand uppercase">E-Learning</span>
                             </div>
-                            <h3 class="text-3xl font-bold text-neutral-900 dark:text-white mb-4 group-hover:text-brand transition-colors">Pandoi Banggai</h3>
+                            <h3
+                                class="text-3xl font-bold text-neutral-900 dark:text-white mb-4 group-hover:text-brand transition-colors">
+                                Pandoi Banggai</h3>
                             <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8 transition-colors">
-                                Platform media pembelajaran untuk mempelajari Bahasa Banggai. Dilengkapi dengan fitur penerjemah digital, manajemen profil, dan sistem kuis interaktif.
+                                Platform media pembelajaran untuk mempelajari Bahasa Banggai. Dilengkapi dengan fitur
+                                penerjemah digital, manajemen profil, dan sistem kuis interaktif.
                             </p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-neutral-200 dark:bg-white/5 border border-neutral-300 dark:border-white/10 rounded-md text-xs font-medium text-neutral-700 dark:text-neutral-300 transition-colors">Laravel</span>
-                                <span class="px-3 py-1 bg-neutral-200 dark:bg-white/5 border border-neutral-300 dark:border-white/10 rounded-md text-xs font-medium text-neutral-700 dark:text-neutral-300 transition-colors">Bootstrap</span>
-                                <span class="px-3 py-1 bg-neutral-200 dark:bg-white/5 border border-neutral-300 dark:border-white/10 rounded-md text-xs font-medium text-neutral-700 dark:text-neutral-300 transition-colors">MySQL</span>
+                                <span
+                                    class="px-3 py-1 bg-neutral-200 dark:bg-white/5 border border-neutral-300 dark:border-white/10 rounded-md text-xs font-medium text-neutral-700 dark:text-neutral-300 transition-colors">Laravel</span>
+                                <span
+                                    class="px-3 py-1 bg-neutral-200 dark:bg-white/5 border border-neutral-300 dark:border-white/10 rounded-md text-xs font-medium text-neutral-700 dark:text-neutral-300 transition-colors">Bootstrap</span>
+                                <span
+                                    class="px-3 py-1 bg-neutral-200 dark:bg-white/5 border border-neutral-300 dark:border-white/10 rounded-md text-xs font-medium text-neutral-700 dark:text-neutral-300 transition-colors">MySQL</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Project 2: Procost POS -->
-                    <div class="group relative rounded-3xl overflow-hidden glass-card hover:border-brand/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(255,107,0,0.08)]">
-                        <div class="h-72 bg-neutral-200 dark:bg-dark-800 relative overflow-hidden flex items-center justify-center border-b border-neutral-300 dark:border-white/5 transition-colors">
-                            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMCwwLDAsMC4wNSkiLz48L3N2Zz4=')] dark:bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wMykiLz48L3N2Zz4=')] opacity-50"></div>
-                            <i class="bi bi-calculator text-9xl text-neutral-400 dark:text-white/5 group-hover:scale-110 transition-transform duration-700"></i>
-                            <div class="absolute inset-0 bg-gradient-to-t from-neutral-100 dark:from-dark-800 to-transparent opacity-90 transition-colors"></div>
+                    <div
+                        class="group relative rounded-3xl overflow-hidden glass-card hover:border-brand/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(255,107,0,0.08)]">
+                        <div
+                            class="h-72 bg-neutral-200 dark:bg-dark-800 relative overflow-hidden flex items-center justify-center border-b border-neutral-300 dark:border-white/5 transition-colors">
+                            <div
+                                class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMCwwLDAsMC4wNSkiLz48L3N2Zz4=')] dark:bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wMykiLz48L3N2Zz4=')] opacity-50">
+                            </div>
+                            <i
+                                class="bi bi-calculator text-9xl text-neutral-400 dark:text-white/5 group-hover:scale-110 transition-transform duration-700"></i>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-neutral-100 dark:from-dark-800 to-transparent opacity-90 transition-colors">
+                            </div>
                         </div>
                         <div class="p-10 relative">
                             <div class="absolute -top-7 right-8">
-                                <a href="https://procost.kesug.com/?i=1" target="_blank" class="w-14 h-14 rounded-full bg-brand text-white flex items-center justify-center hover:scale-110 hover:shadow-brand-glow transition-all shadow-xl">
+                                <a href="https://procost.kesug.com/?i=1" target="_blank"
+                                    class="w-14 h-14 rounded-full bg-brand text-white flex items-center justify-center hover:scale-110 hover:shadow-brand-glow transition-all shadow-xl">
                                     <i class="bi bi-arrow-up-right text-2xl"></i>
                                 </a>
                             </div>
                             <div class="flex gap-3 mb-5">
-                                <span class="text-xs font-bold tracking-widest text-brand uppercase">Sistem Manajemen</span>
+                                <span class="text-xs font-bold tracking-widest text-brand uppercase">Sistem
+                                    Manajemen</span>
                             </div>
-                            <h3 class="text-3xl font-bold text-neutral-900 dark:text-white mb-4 group-hover:text-brand transition-colors">Procost</h3>
+                            <h3
+                                class="text-3xl font-bold text-neutral-900 dark:text-white mb-4 group-hover:text-brand transition-colors">
+                                Procost</h3>
                             <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8 transition-colors">
-                                Sistem Manajemen Siklus Produksi UMKM. Dirancang khusus untuk UMKM yang melakukan proses produksi (manufaktur/F&B). Mengelola seluruh siklus produksi secara terpadu, dari pencatatan bahan baku, proses konversi, hingga penjualan produk jadi.
+                                Sistem Manajemen Siklus Produksi UMKM. Dirancang khusus untuk UMKM yang melakukan proses
+                                produksi (manufaktur/F&B). Mengelola seluruh siklus produksi secara terpadu, dari
+                                pencatatan bahan baku, proses konversi, hingga penjualan produk jadi.
                             </p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-neutral-200 dark:bg-white/5 border border-neutral-300 dark:border-white/10 rounded-md text-xs font-medium text-neutral-700 dark:text-neutral-300 transition-colors">Laravel</span>
-                                <span class="px-3 py-1 bg-neutral-200 dark:bg-white/5 border border-neutral-300 dark:border-white/10 rounded-md text-xs font-medium text-neutral-700 dark:text-neutral-300 transition-colors">Bootstrap</span>
-                                <span class="px-3 py-1 bg-neutral-200 dark:bg-white/5 border border-neutral-300 dark:border-white/10 rounded-md text-xs font-medium text-neutral-700 dark:text-neutral-300 transition-colors">MySQL</span>
+                                <span
+                                    class="px-3 py-1 bg-neutral-200 dark:bg-white/5 border border-neutral-300 dark:border-white/10 rounded-md text-xs font-medium text-neutral-700 dark:text-neutral-300 transition-colors">Laravel</span>
+                                <span
+                                    class="px-3 py-1 bg-neutral-200 dark:bg-white/5 border border-neutral-300 dark:border-white/10 rounded-md text-xs font-medium text-neutral-700 dark:text-neutral-300 transition-colors">Bootstrap</span>
+                                <span
+                                    class="px-3 py-1 bg-neutral-200 dark:bg-white/5 border border-neutral-300 dark:border-white/10 rounded-md text-xs font-medium text-neutral-700 dark:text-neutral-300 transition-colors">MySQL</span>
                             </div>
                         </div>
                     </div>
@@ -375,19 +515,31 @@
         <!-- Contact Section -->
         <section id="contact" class="py-32 relative overflow-hidden">
             <!-- Decorative circle -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-neutral-200 dark:border-white/5 rounded-full pointer-events-none transition-colors"></div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-neutral-200 dark:border-white/5 rounded-full pointer-events-none transition-colors"></div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-brand/5 blur-3xl rounded-full pointer-events-none"></div>
-            
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-neutral-200 dark:border-white/5 rounded-full pointer-events-none transition-colors">
+            </div>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-neutral-200 dark:border-white/5 rounded-full pointer-events-none transition-colors">
+            </div>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-brand/5 blur-3xl rounded-full pointer-events-none">
+            </div>
+
             <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
-                <div class="w-24 h-24 bg-gradient-to-br from-brand/10 dark:from-brand/20 to-transparent text-brand rounded-3xl flex items-center justify-center mx-auto mb-10 border border-brand/20 dark:border-brand/30 shadow-[0_0_30px_rgba(255,107,0,0.15)]">
+                <div
+                    class="w-24 h-24 bg-gradient-to-br from-brand/10 dark:from-brand/20 to-transparent text-brand rounded-3xl flex items-center justify-center mx-auto mb-10 border border-brand/20 dark:border-brand/30 shadow-[0_0_30px_rgba(255,107,0,0.15)]">
                     <i class="bi bi-envelope-paper-heart text-5xl"></i>
                 </div>
-                <h2 class="text-5xl md:text-6xl font-bold text-neutral-900 dark:text-white mb-8 tracking-tight transition-colors">Mari Berkolaborasi<br><span class="brand-gradient">Bersama.</span></h2>
-                <p class="text-xl text-neutral-600 dark:text-neutral-400 mb-12 max-w-2xl mx-auto leading-relaxed transition-colors">
-                    Saya terbuka untuk diskusi mengenai proyek baru, kolaborasi tim, maupun peluang kerja sebagai Junior Web Developer.
+                <h2
+                    class="text-5xl md:text-6xl font-bold text-neutral-900 dark:text-white mb-8 tracking-tight transition-colors">
+                    Mari Berkolaborasi<br><span class="brand-gradient">Bersama.</span></h2>
+                <p
+                    class="text-xl text-neutral-600 dark:text-neutral-400 mb-12 max-w-2xl mx-auto leading-relaxed transition-colors">
+                    Saya terbuka untuk diskusi mengenai proyek baru, kolaborasi tim, maupun peluang kerja sebagai Junior
+                    Web Developer.
                 </p>
-                <a href="mailto:sipadahervandi@gmail.com" class="inline-flex items-center px-10 py-5 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-dark-900 font-bold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all hover:scale-105 shadow-xl hover:shadow-[0_0_40px_rgba(0,0,0,0.2)] dark:hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] text-lg">
+                <a href="mailto:sipadahervandi@gmail.com"
+                    class="inline-flex items-center px-10 py-5 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-dark-900 font-bold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all hover:scale-105 shadow-xl hover:shadow-[0_0_40px_rgba(0,0,0,0.2)] dark:hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] text-lg">
                     Hubungi Saya <i class="bi bi-send-fill ml-3"></i>
                 </a>
             </div>
@@ -395,27 +547,32 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white dark:bg-dark-900 py-10 border-t border-neutral-200 dark:border-white/5 relative z-10 transition-colors">
+    <footer
+        class="bg-white dark:bg-dark-900 py-10 border-t border-neutral-200 dark:border-white/5 relative z-10 transition-colors">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-2xl font-bold text-neutral-900 dark:text-white tracking-wide transition-colors">
                 hervandisipada
             </div>
-            
+
             <p class="text-neutral-500 text-sm text-center md:text-left font-medium">
-                &copy; 2026 Hervandi A. Sipada. <br class="md:hidden">Dibangun dengan Tailwind CSS.
+                &copy; 2026 hervandisipada. <br class="md:hidden">Dibangun dengan Tailwind CSS.
             </p>
-            
+
             <div class="flex items-center space-x-4">
-                <a href="https://github.com/hervandisipada" target="_blank" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-400 dark:hover:border-white/30 transition-all hover:-translate-y-1">
+                <a href="https://github.com/hervandisipada" target="_blank"
+                    class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-400 dark:hover:border-white/30 transition-all hover:-translate-y-1">
                     <i class="bi bi-github text-lg"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/hervandi-sipada-1988a5272/" target="_blank" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-neutral-500 dark:text-neutral-400 hover:text-brand hover:border-brand/30 transition-all hover:-translate-y-1">
+                <a href="https://www.linkedin.com/in/hervandi-sipada-1988a5272/" target="_blank"
+                    class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-neutral-500 dark:text-neutral-400 hover:text-brand hover:border-brand/30 transition-all hover:-translate-y-1">
                     <i class="bi bi-linkedin text-lg"></i>
                 </a>
-                <a href="https://instagram.com/hrvndi" target="_blank" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-neutral-500 dark:text-neutral-400 hover:text-pink-500 hover:border-pink-500/30 transition-all hover:-translate-y-1">
+                <a href="https://instagram.com/hrvndi" target="_blank"
+                    class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-neutral-500 dark:text-neutral-400 hover:text-pink-500 hover:border-pink-500/30 transition-all hover:-translate-y-1">
                     <i class="bi bi-instagram text-lg"></i>
                 </a>
-                <a href="https://facebook.com/hervandi.sipada" target="_blank" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-neutral-500 dark:text-neutral-400 hover:text-blue-600 hover:border-blue-600/30 transition-all hover:-translate-y-1">
+                <a href="https://facebook.com/hervandi.sipada" target="_blank"
+                    class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-neutral-500 dark:text-neutral-400 hover:text-blue-600 hover:border-blue-600/30 transition-all hover:-translate-y-1">
                     <i class="bi bi-facebook text-lg"></i>
                 </a>
             </div>
@@ -426,11 +583,11 @@
     <script>
         // Theme Toggle Logic
         const themeToggleBtn = document.getElementById('theme-toggle');
-        
-        themeToggleBtn.addEventListener('click', function() {
+
+        themeToggleBtn.addEventListener('click', function () {
             // Toggle the 'dark' class on the html element
             document.documentElement.classList.toggle('dark');
-            
+
             // Save the preference to localStorage
             if (document.documentElement.classList.contains('dark')) {
                 localStorage.setItem('theme', 'dark');
@@ -442,7 +599,7 @@
         // Mobile menu toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
-        
+
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
@@ -469,7 +626,7 @@
                 navbar.classList.remove('dark:shadow-lg');
             }
         });
-        
+
         // Initial setup
         if (window.scrollY <= 20) {
             navbar.classList.add('py-5');
@@ -499,9 +656,10 @@
                 }
             });
         }
-        
+
         window.addEventListener("scroll", updateActiveLink);
         updateActiveLink(); // Run on load
     </script>
 </body>
+
 </html>
