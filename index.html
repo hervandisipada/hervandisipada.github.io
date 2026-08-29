@@ -159,7 +159,7 @@
                     <button
                         class="md:hidden ml-4 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white p-2 focus:outline-none transition-colors"
                         id="mobile-menu-btn">
-                        <i class="bi bi-list text-2xl inline-block transition-transform duration-300"></i>
+                        <i class="bi bi-list text-2xl inline-flex items-center justify-center w-6 h-6 transition-transform duration-300"></i>
                     </button>
                 </div>
             </div>
@@ -697,6 +697,13 @@
         // Close mobile menu on link click
         menu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => toggleMenu(true));
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menu.classList.contains('hidden') && !menu.contains(e.target) && !btn.contains(e.target)) {
+                toggleMenu(true);
+            }
         });
 
         // Navbar blur effect on scroll
