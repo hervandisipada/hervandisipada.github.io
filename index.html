@@ -79,6 +79,11 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        
+        .nav-active {
+            font-weight: 700 !important;
+            color: #FF6B00 !important;
+        }
     </style>
 </head>
 <body class="bg-neutral-50 dark:bg-dark-900 text-neutral-600 dark:text-neutral-300 font-sans antialiased selection:bg-brand selection:text-white overflow-x-hidden relative transition-colors duration-300">
@@ -101,7 +106,7 @@
                 <div class="flex items-center">
                     <!-- Desktop Menu -->
                     <div class="hidden md:flex items-center space-x-8">
-                        <a href="#home" class="text-sm font-medium text-neutral-900 dark:text-white hover:text-brand dark:hover:text-brand transition-colors">Home</a>
+                        <a href="#home" class="text-sm font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Home</a>
                         <a href="#about" class="text-sm font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Tentang</a>
                         <a href="#skills" class="text-sm font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Keahlian</a>
                         <a href="#projects" class="text-sm font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Portofolio</a>
@@ -125,7 +130,7 @@
         <!-- Mobile Menu -->
         <div class="md:hidden hidden bg-white dark:bg-dark-800 border-b border-neutral-200 dark:border-white/5 absolute w-full shadow-2xl transition-colors duration-300" id="mobile-menu">
             <div class="px-6 py-4 space-y-4 flex flex-col">
-                <a href="#home" class="text-neutral-900 dark:text-white hover:text-brand transition-colors font-medium">Home</a>
+                <a href="#home" class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors font-medium">Home</a>
                 <a href="#about" class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors font-medium">Tentang</a>
                 <a href="#skills" class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors font-medium">Keahlian</a>
                 <a href="#projects" class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors font-medium">Portofolio</a>
@@ -473,6 +478,30 @@
             navbar.classList.add('py-3');
             navbar.classList.remove('py-5');
         }
+
+        // Scroll Spy
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll("nav a[href^='#']");
+
+        function updateActiveLink() {
+            let current = "";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach((link) => {
+                link.classList.remove("nav-active");
+                if (current && link.getAttribute("href") === `#${current}`) {
+                    link.classList.add("nav-active");
+                }
+            });
+        }
+        
+        window.addEventListener("scroll", updateActiveLink);
+        updateActiveLink(); // Run on load
     </script>
 </body>
 </html>
